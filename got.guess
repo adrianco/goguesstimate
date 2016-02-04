@@ -1,0 +1,111 @@
+{
+    "space": {
+        "description": "Testing",
+        "graph": {
+            "guesstimates": [
+                {
+                    "data": [
+                        119958,
+                        6066,
+                        13914,
+                        9595,
+                        6773,
+                        5867,
+                        2347,
+                        1333,
+                        9900,
+                        9404,
+                        13518,
+                        9021,
+                        7915,
+                        3733,
+                        10244,
+                        5461,
+                        12243,
+                        7931,
+                        9044,
+                        11706,
+                        5706,
+                        22861,
+                        9022,
+                        48661,
+                        15158,
+                        28995,
+                        16885,
+                        9564,
+                        17915,
+                        6610,
+                        7080,
+                        7065,
+                        12992,
+                        35431,
+                        11910,
+                        11465,
+                        14455,
+                        25790,
+                        8339,
+                        9991
+                    ],
+                    "guesstimateType": "DATA",
+                    "input": "",
+                    "metric": "AB"
+                },
+                {
+                    "guesstimateType": "POINT",
+                    "input": "40",
+                    "metric": "AC"
+                },
+                {
+                    "guesstimateType": "NORMAL",
+                    "input": "[1000,4000]",
+                    "metric": "AD"
+                },
+                {
+                    "guesstimateType": "FUNCTION",
+                    "input": "=100+((randomInt(0,100)>AC)?AB:AD)",
+                    "metric": "AE"
+                }
+            ],
+            "metrics": [
+                {
+                    "id": "AB",
+                    "location": {
+                        "column": 4,
+                        "row": 2
+                    },
+                    "name": "memcached",
+                    "readableId": "AB"
+                },
+                {
+                    "id": "AC",
+                    "location": {
+                        "column": 3,
+                        "row": 2
+                    },
+                    "name": "memcached percent",
+                    "readableId": "AC"
+                },
+                {
+                    "id": "AD",
+                    "location": {
+                        "column": 3,
+                        "row": 3
+                    },
+                    "name": "staash cpu",
+                    "readableId": "AD"
+                },
+                {
+                    "id": "AE",
+                    "location": {
+                        "column": 2,
+                        "row": 3
+                    },
+                    "name": "staash",
+                    "readableId": "AE"
+                }
+            ]
+        },
+        "is_private": "true",
+        "name": "gotest"
+    }
+}
