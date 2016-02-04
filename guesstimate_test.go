@@ -65,6 +65,6 @@ func TestGuess(t *testing.T) {
 			},
 		},
 	}
-	fmt.Println(g.Space.Graph.Guesstimates)
 	SaveGuess(g, "gotest")
+	fmt.Println("\n$ sh pretty.sh to pretty print the output file in standard json and compare want.guess with got.guess")
 }

@@ -29,10 +29,10 @@ type GuessGraph struct {
 
 // Guesstimate Metric
 type GuessMetric struct {
-	ID         string              `json:"id"`
-	ReadableID string              `json:"readableId"`
-	Name       string              `json:"name"`
-	Location   GuessMetricLocation `json:"location"`
+	ID         string              `json:"id"`         // opaque ID to match to Guesstimate below
+	ReadableID string              `json:"readableId"` // 2 character ID shown on user interface
+	Name       string              `json:"name"`       // display string
+	Location   GuessMetricLocation `json:"location"`   // unique cell location
 }
 
 type GuessMetricLocation struct {
@@ -40,11 +40,12 @@ type GuessMetricLocation struct {
 	Column int `json:"column"`
 }
 
+// Guesstimate refers to Metrics
 type Guesstimate struct {
-	Metric          string  `json:"metric"`
-	Input           string  `json:"input"`
-	GuesstimateType string  `json:"guesstimateType"`
-	Data            []int64 `json:"data,omitempty"`
+	Metric          string  `json:"metric"`          // must match one ID
+	Input           string  `json:"input"`           // [1,2]   3      null, =AB+AD
+	GuesstimateType string  `json:"guesstimateType"` // NORMAL, POINT, DATA, FORMULA
+	Data            []int64 `json:"data,omitempty"`  // [119958, 6066, 13914, 9595, 6773] samples from a distribution
 }
 
 // Save a guess to a file
