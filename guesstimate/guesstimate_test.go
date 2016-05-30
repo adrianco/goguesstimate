@@ -21,7 +21,7 @@ var example = `{
           "guesstimates": [
 	      {"metric": "AB", "input": null, "guesstimateType": "DATA", "data": [119958,6066,13914,9595,6773,5867,2347,1333,9900,9404,13518,9021,7915,3733,10244,5461,12243,7931,9044,11706,5706,22861,9022,48661,15158,28995,16885,9564,17915,6610,7080,7065,12992,35431,11910,11465,14455,25790,8339,9991]},
               {"metric": "AC", "input": "40", "guesstimateType": "POINT"},
-              {"metric": "AD", "input": "[1000,4000]", "guesstimateType": "NORMAL"},
+              {"metric": "AD", "input": "[1000,4000]", "guesstimateType": "LOGNORMAL"},
               {"metric": "AE", "input": "=100+((randomInt(0,100)>AC)?AB:AD)", "guesstimateType": "FUNCTION"}
           ]
       }
@@ -59,7 +59,7 @@ func TestGuess(t *testing.T) {
 						Input:           "40",
 						GuesstimateType: "POINT",
 					},
-					Guesstimate{"AD", "[1000,4000]", "NORMAL", nil},
+					Guesstimate{"AD", "[1000,4000]", "LOGNORMAL", nil},
 					Guesstimate{"AE", "=100+((randomInt(0,100)>AC)?AB:AD)", "FUNCTION", nil},
 				},
 			},

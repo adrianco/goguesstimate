@@ -52,7 +52,7 @@ type Guesstimate struct {
 func SaveGuess(g Guess, fn string) {
 	dfile, err := os.Create(fn + ".guess")
 	if err != nil {
-		log.Fatal("%v: %v\n", fn, err)
+		log.Fatal(err)
 	}
 	sj, _ := json.Marshal(g)
 	dfile.WriteString(fmt.Sprintf("%v", string(sj)))
