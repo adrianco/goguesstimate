@@ -47,22 +47,22 @@
                         9991
                     ],
                     "guesstimateType": "DATA",
-                    "input": "",
+                    "expression": "",
                     "metric": "AB"
                 },
                 {
                     "guesstimateType": "POINT",
-                    "input": "40",
+                    "expression": "40",
                     "metric": "AC"
                 },
                 {
                     "guesstimateType": "LOGNORMAL",
-                    "input": "[1000,4000]",
+                    "expression": "[1000,4000]",
                     "metric": "AD"
                 },
                 {
                     "guesstimateType": "FUNCTION",
-                    "input": "=100+((randomInt(0,100)>AC)?AB:AD)",
+                    "expression": "=100+((randomInt(0,100)>${metric:AC})?${metric:AB}:${metric:AD})",
                     "metric": "AE"
                 }
             ],

@@ -43,7 +43,9 @@ type GuessMetricLocation struct {
 // Guesstimate refers to Metrics
 type Guesstimate struct {
 	Metric          string  `json:"metric"`          // must match one ID
+	//THE "Input" field has been DEPRECATED in the Guesstimate API; use the Expression field instead
 	Input           string  `json:"input"`           // [1,2]   3      null, =AB+AD
+	Expression		string  `json:"expression"`           // [1,2]   3      null, =${metric:<metric ID1>} + ${metric:<metric ID2>}`
 	GuesstimateType string  `json:"guesstimateType"` // NORMAL, POINT, DATA, FORMULA
 	Data            []int64 `json:"data,omitempty"`  // [119958, 6066, 13914, 9595, 6773] samples from a distribution
 }
